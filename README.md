@@ -24,21 +24,25 @@ Your game connects directly via your ISP, while the rest of your Mac's internet 
 
 ## How to Run (Step-by-Step)
 
-1. **Connect your VPN:** Ensure your VPN is connected and active. **Important:** Open your VPN settings and ensure any strict "Kill Switch" feature is turned **OFF**, as this will block local network routing.
+### Step 1: Save the Script
+If you are not comfortable with Terminal commands like `git clone`, you can manually save the script using TextEdit:
+1. Open the **TextEdit** app on your Mac.
+2. In the top menu bar, click **Format** -> **Make Plain Text** (This is crucial; otherwise, Mac saves it as a formatted document which breaks the code).
+3. Copy all the code from the `osrs_mac.py` file in this repository and paste it into the document.
+4. Save the file to your **Desktop** and name it exactly: `osrs_mac.py`
 
-2. **Open Terminal:** Press `Cmd + Space` on your keyboard to open Spotlight Search, type `Terminal`, and hit **Enter**.
+### Step 2: Configure Your VPN
+Ensure your VPN is connected and active. 
+**Important:** Open your VPN settings and ensure any strict "Kill Switch" feature is turned **OFF**, as this will aggressively block the local network routing our script uses.
 
-3. **Download the script:** Copy and paste the following command into your Terminal and hit **Enter**:
-    `git clone https://github.com/nevotic/runelite-macos-vpn-split-tunnel.git`
-
-4. **Open the folder:** Navigate into the downloaded folder by typing:
-    `cd runelite-macos-vpn-split-tunnel`
-
-5. **Execute the script:** Run the script using Python with administrator privileges:
-    `sudo python3 osrs_mac.py`
-    *(Note on Passwords: Because this script safely modifies your Mac's temporary network routing table, it requires your Mac login password. As you type your password, no characters or asterisks will appear on the screen. This is a normal macOS security feature. Just type your password blindly and press Enter.)*
-
-6. **Play!** Wait a few seconds for the script to fetch the IPs and apply the routes. Once it says "Success!", open the Jagex Launcher or RuneLite and play.
+### Step 3: Run the Script
+1. Press `Cmd + Space` on your keyboard to open Spotlight Search, type `Terminal`, and hit **Enter**.
+2. Tell the Terminal to look at your Desktop folder by pasting this command and hitting **Enter**:
+   `cd ~/Desktop`
+3. Run the script using Python with administrator privileges:
+   `sudo python3 osrs_mac.py`
+   *(Note on Passwords: Because this script safely modifies your Mac's temporary network routing table, it requires your Mac login password. As you type your password, no characters or asterisks will appear on the screen. This is a normal macOS security feature. Just type your password blindly and press Enter.)*
+4. Wait a few seconds for the script to fetch the IPs and apply the routes. Once it says "Success!", open the Jagex Launcher or RuneLite and play!
 
 ## Resetting the Routes
 The routing rules created by this script are temporary and stored in your Mac's RAM. To clear the rules and revert everything back to normal, simply turn your Mac's Wi-Fi off and back on again, or reboot your computer. You will need to run the script again after a reboot if you want to play.
