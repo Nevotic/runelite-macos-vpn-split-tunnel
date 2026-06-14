@@ -36,7 +36,7 @@ Your game connects directly via your ISP, while the rest of your Mac's internet 
 
 5. **Execute the script:** Run the script using Python with administrator privileges:
     `sudo python3 osrs_mac.py`
-    *(Note on Passwords: Because this script safely modifies your Mac's temporary network routing table, it requires your Mac login password. As you type your password, no characters or asterisks will appear on the screen. This is a normal macOS security feature. Just type your password blindly and press Enter.)*
+    *(Note on Passwords: Because this script safely modifies your Mac's temporary network routing table, it requires your Mac login password.
 
 6. **Play!** Wait a few seconds for the script to fetch the IPs and apply the routes. Once it says "Success!", open the Jagex Launcher or RuneLite and play.
 
